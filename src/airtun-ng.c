@@ -1642,7 +1642,7 @@ int main( int argc, char *argv[] )
                     printf("\"%s --help\" for help.\n", argv[0]);
                     return( 1 );
                 }
-                if( opt.crypt != CRYPT_NONE )
+                if( opt.crypt == CRYPT_NONE ) // Dirty fix to use WPA
                 {
                     printf( "Encryption key already specified.\n" );
                     printf("\"%s --help\" for help.\n", argv[0]);
